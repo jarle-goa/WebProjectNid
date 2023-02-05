@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NID Official</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/scripts/menu.js"></script>
+    <script src="/static/scripts/functions.js"></script>
+    <script src="/static/scripts/authentication.js"></script>
+    <script>window.addEventListener("load", ()=>{check_session();});</script>   <!--Checking session when refreshing the page-->
+    <script>window.addEventListener("hashchange", checkHash);</script>          <!--running checkHash for simpel routing-->
+    <script>window.addEventListener("load", checkHash);</script>                <!--And running it on load as well-->
+</head>
+<body onload="news()" id="body">
+    <header>
+        <div class="social_container">
+            <a href="https://www.youtube.com" target="_blank"><img src="static/socialmedia/001-youtube.png" alt="Youtube" class="social_icon"></a>
+            <a href="https://twitter.com/" target="_blank"><img src="static/socialmedia/007-twitter-1.png" alt="Twitter" class="social_icon"></a>
+            <a href="https://www.snapchat.com/l/nb-no/" target="_blank"><img src="static/socialmedia/013-snapchat.png" alt="Snapchat" class="social_icon"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="static/socialmedia/020-instagram.png" alt="Instagram" class="social_icon"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="static/socialmedia/023-facebook.png" alt="Facebook" class="social_icon"></a>
+            <a href="https://www.spotify.com/no-en/home/" target="_blank"><img src="static/socialmedia/spotify.png" alt="Spotify" class="social_icon"></a>
+            
+        </div>
+        <div class="login_container">
+            <form method="POST">
+            <span id="login_logout"></span>
+            <span><input id="username" name="username_input" type="text" placeholder="Username"></span>
+            <span><input id="password" name="password_input" type="password" placeholder="Password"></span>
+            <span id="log_out"></span>
+            </form>
+        </div>
+        
+    </header>
+    <aside>
+        <img src="static/logo/BCF6AF3F-BF9A-4E1A-A8FD-339660858828.png" alt="NID-Logo" class="logo">
+        <div id="menu">
+            <h2 class="animate_line" onclick="news()"><a href="#News">News</a></h2>
+            <h2 class="animate_line" onclick="store()"><a href="#Store">Store</a></h2>
+            <h2 class="animate_line" onclick="music()"><a href="#Music">Music</a></h2>
+            <h2 class="animate_line" onclick="tour()"><a href="#Tour">Tour</a></h2>
+            <h2 class="animate_line" onclick="cart()"><a href="#Cart">Cart</a></h2>
+            <a class="admin_icon" href="#Adminpage"><h2 class="animate_line", id="hidden" onclick="makeAdminPage()">Admin Page</h2></a>
+        </div>
+    </aside>
+    <div id="ERROR"></div>
+    <main id="main_loader">
+        <!--
+
+            CONTENT WILL BE LOADED HERE!
+
+        -->
+    </main>
+</body>
+</html>
+
